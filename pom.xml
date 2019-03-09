@@ -7,12 +7,13 @@
     <groupId>dev.bobscott</groupId>
     <artifactId>spring-maven-mvc-example</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
-        <commons-logging.version>1.2</commons-logging.version>
+        <commons.logging.version>1.2</commons.logging.version>
         <jstl.version>1.2</jstl.version>
         <spring.version>5.1.5.RELEASE</spring.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -27,30 +28,24 @@
             <version>${spring.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>${commons.logging.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-            <version>1.2.2</version>
-        </dependency>
-
+		 <dependency>
+		    <groupId>commons-logging</groupId>
+		    <artifactId>commons-logging</artifactId>
+		    <version>${commons.logging.version}</version>
+		</dependency>
+		
+	    <dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>
+		    <scope>provided</scope>
+		</dependency>
 
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
             <version>${jstl.version}</version>
         </dependency>
-
+    </dependencies>
 
 </project>
